@@ -210,7 +210,3 @@ pytest
 ```
 
 ---
-
-# License
-
-MIT License.
