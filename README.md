@@ -1,51 +1,162 @@
 # 🎓 EduForge
+### AI-Powered Multi-Agent Learning Assistant
 
-EduForge is a production-quality AI-powered educational assistant built with **Streamlit**, **LangGraph**, **Google Gemini 2.5 Flash**, and **Tavily Search**.
-
-It generates personalized learning roadmaps, gathers high-quality learning resources, creates quizzes, evaluates the generated learning plan, and returns a validated final response through a modular multi-agent workflow.
-
----
-
-# Features
-
-- Multi-agent architecture using LangGraph
-- Google Gemini 2.5 Flash for all reasoning tasks
-- Tavily Search integration for current learning resources
-- Professional Streamlit interface
-- Structured JSON outputs
-- Modular and maintainable codebase
-- Optional ChromaDB memory support
-- Type hints throughout
-- PEP-8 compliant
-- Lightweight architecture without unnecessary infrastructure
+> Transform any learning goal into a personalized roadmap, curated resources, interactive quizzes, and expert feedback using an AI-powered multi-agent system.
 
 ---
 
-# Tech Stack
+## 🚀 Overview
 
-- Python 3.11+
-- Streamlit
-- LangGraph
-- Google Gemini 2.5 Flash
-- Google Generative AI SDK
-- Tavily Search API
-- ChromaDB (optional)
-- Pydantic
+Learning a new skill often requires searching through countless articles, videos, roadmaps, and tutorials. Beginners frequently struggle with information overload and lack a structured learning path.
+
+**EduForge** solves this problem by orchestrating multiple AI agents that collaborate to design a complete, personalized learning experience from a single user prompt.
+
+Built with **LangGraph**, **Google Gemini 2.5 Flash**, **Tavily Search**, and **Streamlit**, EduForge demonstrates how AI agents can work together to perform planning, research, assessment, and evaluation in a real-world educational application.
 
 ---
 
-# Project Structure
+# ✨ Key Features
 
-```text
+✅ Multi-Agent Architecture powered by LangGraph
+
+✅ Personalized learning roadmaps
+
+✅ Real-time web research using Tavily Search
+
+✅ AI-generated quizzes with explanations
+
+✅ Automated quality evaluation and feedback
+
+✅ Structured JSON communication between agents
+
+✅ Professional Streamlit interface
+
+✅ Optional ChromaDB memory
+
+✅ Modular and scalable codebase
+
+---
+
+# 🧠 Why EduForge?
+
+Unlike traditional AI chatbots that generate a single response, EduForge decomposes the learning process into specialized AI agents.
+
+Each agent focuses on a specific responsibility, resulting in more accurate, structured, and reliable outputs.
+
+Instead of asking:
+
+> "Teach me AI"
+
+Users receive:
+
+- 📅 12-week roadmap
+- 🎯 Learning objectives
+- 📚 Curated learning resources
+- 💡 Recommended projects
+- 📝 Knowledge assessment
+- 📊 AI-generated evaluation
+- ✅ Actionable improvement suggestions
+
+---
+
+# 🏗️ Multi-Agent Architecture
+
+```
+                     User
+                       │
+                       ▼
+               🎯 Orchestrator
+                       │
+       ┌───────────────┼───────────────┐
+       ▼               ▼               ▼
+   Planner       Researcher        Quiz Agent
+       │               │               │
+       └───────────────┼───────────────┘
+                       ▼
+               Evaluator Agent
+                       │
+                       ▼
+              Supervisor Agent
+                       │
+                       ▼
+                 Final Learning Package
+```
+
+---
+
+# 🤖 AI Agents
+
+## 🎯 Planner Agent
+
+Designs a personalized learning roadmap including:
+
+- Weekly schedule
+- Learning objectives
+- Estimated duration
+- Difficulty level
+
+---
+
+## 🔍 Research Agent
+
+Uses Tavily Search to gather:
+
+- Latest learning resources
+- Official documentation
+- GitHub repositories
+- Books
+- Courses
+- Best practices
+
+---
+
+## 📝 Quiz Agent
+
+Generates assessment quizzes to reinforce learning.
+
+Includes:
+
+- Multiple-choice questions
+- Correct answers
+- Explanations
+
+---
+
+## 📊 Evaluator Agent
+
+Reviews the generated learning plan and provides:
+
+- Overall score
+- Strengths
+- Weaknesses
+- Improvement suggestions
+
+---
+
+## 🛡️ Supervisor Agent
+
+Validates the complete workflow before delivering the final response.
+
+---
+
+# ⚙️ Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| LangGraph | Multi-Agent Workflow |
+| Google Gemini 2.5 Flash | Reasoning & Content Generation |
+| Tavily Search | Real-Time Web Research |
+| Streamlit | User Interface |
+| Pydantic | Structured State Management |
+| ChromaDB | Optional Memory |
+| Python 3.11 | Core Language |
+
+---
+
+# 📂 Project Structure
+
+```
 EduForge/
-│
-├── app.py
-├── graph.py
-├── state.py
-├── config.py
-├── requirements.txt
-├── README.md
-├── .env.example
 │
 ├── agents/
 │   ├── orchestrator.py
@@ -55,162 +166,162 @@ EduForge/
 │   ├── evaluator.py
 │   └── supervisor.py
 │
-├── tools/
-│   ├── gemini.py
-│   ├── search.py
-│   └── memory.py
-│
 ├── prompts/
-│   ├── planner.md
-│   ├── researcher.md
-│   ├── quiz.md
-│   └── evaluator.md
-│
+├── tools/
 ├── utils/
-│   ├── logger.py
-│   └── helpers.py
+├── tests/
 │
-└── tests/
-    └── test_agents.py
+├── app.py
+├── graph.py
+├── state.py
+├── config.py
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-# Multi-Agent Workflow
+# 🔄 Workflow
 
 ```
-User
-   │
-   ▼
-Orchestrator
-   │
-   ▼
-Planner
-   │
-   ▼
-Researcher
-   │
-   ▼
-Quiz
-   │
-   ▼
-Evaluator
-   │
-   ▼
-Supervisor
-   │
-   ▼
-Final Output
+User Input
+
+↓
+
+Planner Agent
+
+↓
+
+Research Agent
+
+↓
+
+Quiz Agent
+
+↓
+
+Evaluator Agent
+
+↓
+
+Supervisor Agent
+
+↓
+
+Final Learning Package
 ```
 
 ---
 
-# Installation
+# 🖥️ Sample Output
 
-Clone the repository:
+Given the prompt:
+
+```
+AI in 3 Months
+```
+
+EduForge generates:
+
+- 🎯 Learning Objectives
+- 📅 Weekly Learning Plan
+- 📚 Curated Study Notes
+- 🚀 Practical Projects
+- 📝 Interactive Quiz
+- 📊 Performance Evaluation
+- 💬 Personalized Feedback
+
+---
+
+# 📸 Screenshots
+
+> *(Add screenshots here)*
+
+### Home Screen
+
+![Home](assets/home.png)
+
+### Generated Roadmap
+
+![Roadmap](assets/roadmap.png)
+
+### Quiz
+
+![Quiz](assets/quiz.png)
+
+### Evaluation
+
+![Evaluation](assets/evaluation.png)
+
+---
+
+# 🚀 Installation
 
 ```bash
 git clone https://github.com/yourusername/EduForge.git
+
 cd EduForge
-```
 
-Create a virtual environment:
-
-```bash
 python -m venv .venv
-```
 
-Activate it.
-
-Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-Linux/macOS:
-
-```bash
-source .venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
-```
 
----
-
-# Environment Variables
-
-Create a `.env` file from `.env.example`.
-
-```env
-GOOGLE_API_KEY=your_google_api_key
-TAVILY_API_KEY=your_tavily_api_key
-```
-
----
-
-# Run the Application
-
-```bash
 streamlit run app.py
 ```
 
 ---
 
-# Application Workflow
+# 🔑 Environment Variables
 
-1. User enters a learning topic.
-2. Orchestrator initializes the workflow.
-3. Planner creates a learning roadmap.
-4. Researcher retrieves relevant resources using Tavily Search.
-5. Gemini summarizes the resources.
-6. Quiz agent generates assessment questions.
-7. Evaluator scores the generated content.
-8. Supervisor validates the output.
-9. Streamlit displays the complete learning package.
+```
+GOOGLE_API_KEY=your_key
+
+TAVILY_API_KEY=your_key
+```
 
 ---
 
-# Design Principles
+# 🧪 Running Tests
 
-- Single Gemini client shared across agents
-- Linear LangGraph workflow
-- Minimal dependencies
-- Modular architecture
-- Reusable utility functions
-- No circular imports
-- No placeholder code
-- No complex retry logic
-- No Docker
-- No FastAPI
-- No Redis
-- No Celery
-- No Kubernetes
-
----
-
-# Optional Memory
-
-If ChromaDB is configured, EduForge can store generated learning plans for lightweight retrieval.
-
-The application functions normally without persistent memory.
-
----
-
-# Testing
-
-Run:
-
-```bash
+```
 pytest
 ```
 
 ---
 
-# License
+# 🎯 Future Improvements
 
-MIT License.
+- Multi-language support
+- Voice interaction
+- PDF learning plans
+- Flashcard generation
+- Progress tracking dashboard
+- Learning analytics
+- RAG-powered document ingestion
+- Adaptive learning recommendations
+
+---
+
+# 💡 Why This Project Matters
+
+EduForge demonstrates how multiple AI agents can collaborate to solve a real-world educational challenge.
+
+Rather than relying on a single LLM response, specialized agents plan, research, assess, evaluate, and validate the learning experience, producing structured, high-quality educational content.
+
+This project showcases practical applications of:
+
+- Agentic AI
+- LangGraph
+- Prompt Engineering
+- Tool Calling
+- State Management
+- LLM Orchestration
+- AI-assisted Education
+
+---
+
+# 👩‍💻 Built For
+
+🏆 Kaggle × Google AI Agents Intensive Capstone Project
+
+Developed to demonstrate production-ready multi-agent systems using modern LLM orchestration techniques.
