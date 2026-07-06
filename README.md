@@ -288,6 +288,7 @@ pytest
 ```
 
 ---
+<<<<<<< HEAD
 
 # 🎯 Future Improvements
 
@@ -325,3 +326,5 @@ This project showcases practical applications of:
 🏆 Kaggle × Google AI Agents Intensive Capstone Project
 
 Developed to demonstrate production-ready multi-agent systems using modern LLM orchestration techniques.
+=======
+>>>>>>> 92b2fe0dfd7177d569893e4f3729f1ab882a5f1f
